@@ -13,5 +13,4 @@ public class destroyoncontact : MonoBehaviour
     }
 }
 
-// Update is called once per frame
 

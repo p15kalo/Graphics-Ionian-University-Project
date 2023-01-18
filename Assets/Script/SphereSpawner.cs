@@ -7,35 +7,40 @@ using UnityEngine;
 public class SphereSpawner : MonoBehaviour
 {
     public GameObject prefab;
-    public float timeUntilSpawn = 10f;
-    private bool hasSpawned = false;
+    public float timeUntilSpawn;
+    private bool spawn = true;
+    public int count = 0;
     void Start()
-    {
-        
+    {   
     }
 
     void Update()
     {
-        if (!hasSpawned)
+        if (spawn)
         {
             Invoke("Spawn", timeUntilSpawn);
-            hasSpawned = true;
-        }
-        GameObject originalSphere = GameObject.Find("Sphere");
-        if (originalSphere != null)
-        {
-            if (originalSphere.transform.position.y < -15)
-            {
-                originalSphere.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePosition;
-                originalSphere.GetComponent<Renderer>().enabled = false;
-            }
+            spawn = false;
         }
     }
 
     void Spawn()
     {
+        spawn = true;
         GameObject newSphere = Instantiate(prefab);
         newSphere.name = "Sphere_clone";
-        newSphere.transform.position = new Vector3(0, 50f, 0);
+        bool daBomb = (count + 1) % 5 == 0 && count != 0;
+        if (daBomb)
+        {
+            newSphere.GetComponent<Rigidbody>().AddRelativeForce(
+                new Vector3((float)Math.Cos(Math.PI * count / 7),
+                -500,
+                (float)Math.Cos(Math.PI * count / 7))
+            );
+        }
+        newSphere.GetComponent<Rigidbody>().AddRelativeForce(
+                new Vector3(0, -700, 0));
+        newSphere.transform.position = new Vector3(0, 70f, 0);
+
+            count++;
     }
 }

@@ -12,7 +12,6 @@ public class LightsliderScript : MonoBehaviour
         Lightslider.value = Spotlight.intensity;
 
     }
-
     // Update is called once per frame
     void Update()
     {
