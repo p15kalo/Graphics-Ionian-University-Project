@@ -1,13 +1,17 @@
-using System.Collections;
-using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class SphereCounter : MonoBehaviour
 {
-    public Text countText;
+    public TMP_Text countText;
     public SphereSpawner Spheres;
     public int count = 0;
+
+    void Start()
+    {
+     
+    }
+
     void Update()
     {
         count = Spheres.count;
