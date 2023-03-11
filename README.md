@@ -1,8 +1,8 @@
-# Graphics Ionian Univercity Project
+# Graphics Ionian University Project
 ![GraphicsUniProject](https://user-images.githubusercontent.com/22774852/224502619-98c53f16-99d5-4d98-8544-ba11cd7f3b91.PNG)
 
 ### Project Description
-This is a project for Computer Graphics for Ionian Univercity which is built using Unity 2020.3.40f1. The scene includes a sphere that spawns and drops on the floor every x seconds.
+This is a project for Computer Graphics for Ionian University which is built using Unity 2020.3.40f1. The scene includes a sphere that spawns and drops on the floor every x seconds.
 
 ### Getting Started
 Just download the repo and run it using preferably Unity 2020.3.40f1
