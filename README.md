@@ -1,4 +1,5 @@
 # Graphics Ionian Univercity Project
+![GraphicsUniProject](https://user-images.githubusercontent.com/22774852/224502619-98c53f16-99d5-4d98-8544-ba11cd7f3b91.PNG)
 
 ### Project Description
 This is a project for Computer Graphics for Ionian Univercity which is built using Unity 2020.3.40f1. The scene includes a sphere that spawns and drops on the floor every x seconds.
@@ -8,9 +9,10 @@ Just download the repo and run it using preferably Unity 2020.3.40f1
 
 ### Project Description
 - A plane that acts like a floor
-- A spawner that spawns the spheres on a fixed location every "x" seconds (value can be changed in Unity Editor, default is 1 )
+- A spawner that spawns the spheres on a fixed location every "x" seconds (value can be changed through Unity Editor, default is 1)
 - A counter for spawned spheres
 - A slider to adjust lighting intensity
+- A transparent plane that destroys the spheres on touch
 
 ### Built With
 - Unity
